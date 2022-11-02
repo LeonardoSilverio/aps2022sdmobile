@@ -1,0 +1,241 @@
+unit U_frmPesqProdutosListView;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.ListView.Types, FMX.ListView, FMX.Objects, FMX.Controls.Presentation,
+  FMX.Edit, FMX.Layouts, FMX.StdCtrls, Data.DB, Datasnap.DBClient,
+  Frame_produtos, IPPeerClient, Data.Cloud.CloudAPI, Data.Cloud.AmazonAPI,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient, IdHTTP,
+  FMX.BitmapHelper, FMX.Effects, FMX.Filter.Effects, System.Rtti,
+  System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
+  Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope, Loading,
+  AnonThread, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, DataSetConverter4D.Helper,
+  DataSetConverter4D.Impl, DataSetConverter4D, DataSetConverter4D.Util,
+  U_frmPesqProdutosListView10_4, Up_APITools;
+
+type
+  TfrmPesqProdutosListView = class(TForm)
+    Layout1: TLayout;
+    ClientDataSet1: TClientDataSet;
+    ClientDataSet1Nome: TStringField;
+    DataSource1: TDataSource;
+    StyleBook1: TStyleBook;
+    Panel1: TPanel;
+    Edit1: TEdit;
+    Image1: TImage;
+    vScrollBox: TVertScrollBox;
+    AMZConnect: TAmazonConnectionInfo;
+    IdHTTP1: TIdHTTP;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkFillControlToField1: TLinkFillControlToField;
+    ListView1: TListView;
+    LinkFillControlToField2: TLinkFillControlToField;
+    RoundRect1: TRoundRect;
+    Label2: TLabel;
+    FDMemTable1: TFDMemTable;
+    procedure Image1Click(Sender: TObject);
+    procedure Edit1KeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure RoundRect1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    procedure ThreadEnd(Sender: TObject);
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure AddMakeUp(id:integer; nome:string; imagemAWS:string; preco:string);
+  end;
+
+var
+  frmPesqProdutosListView: TfrmPesqProdutosListView;
+
+implementation
+
+{$R *.fmx}
+
+uses U_frmPesqProdutos;
+
+procedure TfrmPesqProdutosListView.AddMakeUp(id:integer; nome:string; imagemAWS:string; preco:string);
+var
+LItem: TListViewItem;
+frame : TFrameProduto;
+begin
+
+  LItem := ListView1.Items.Add;
+
+  LItem.Text := nome;
+
+end;
+
+procedure TfrmPesqProdutosListView.Edit1KeyUp(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if edit1.Text = '' then
+  begin
+      ListView1.Items.Clear;
+      while not FDMemTable1.Eof do //RecNo < 5 do
+      begin
+            AddMakeUp(FDMemTable1.FieldByName('id').AsInteger,
+                      FDMemTable1.FieldByName('name').AsString,
+                      FDMemTable1.FieldByName('api_featured_image').AsString,
+                      FDMemTable1.FieldByName('price').AsString);
+
+
+        FDMemTable1.Next;
+      end;
+  end;
+end;
+
+procedure TfrmPesqProdutosListView.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  frmPesqProdutosListView := nil;
+end;
+
+procedure TfrmPesqProdutosListView.ThreadEnd(Sender: TObject);
+begin
+
+
+end;
+
+procedure TfrmPesqProdutosListView.Image1Click(Sender: TObject);
+var
+t : TThread;
+begin
+  TLoading.ShowLoad(frmPesqProdutos, 'Consultando...');
+
+  t := TThread.CreateAnonymousThread(procedure
+  var
+  x : integer;
+  begin
+//    Data_Module.RESTRequest1.Execute;
+
+
+
+    ListView1.BeginUpdate;
+    if edit1.Text = '' then
+    begin
+      sleep(1000);
+      TThread.Synchronize(nil, procedure
+      begin
+        TLoading.hide;
+      end);
+
+    end
+    else
+    begin
+
+      if edit1.Text.Length < 3 then
+      begin
+        TLoading.hide;
+      end
+      else
+      begin
+        ListView1.Items.Clear;
+        with FDMemTable1 do
+        begin
+          Filtered := False;
+          Filter := 'name like ' + QuotedStr(edit1.Text + '%');
+          Filtered := True;
+        end;
+
+        sleep(1000);
+        while not FDMemTable1.Eof do //RecNo < 5 do
+        begin
+          TThread.Synchronize(nil, procedure
+          begin
+
+
+              AddMakeUp(FDMemTable1.FieldByName('id').AsInteger,
+                        FDMemTable1.FieldByName('name').AsString,
+                        FDMemTable1.FieldByName('api_featured_image').AsString,
+                        FDMemTable1.FieldByName('price').AsString);
+
+            TLoading.hide;
+          end);
+
+
+
+          FDMemTable1.Next;
+        end;
+
+        FDMemTable1.Filtered := False;
+
+      end;
+
+    end;
+
+    ListView1.EndUpdate;
+  end);
+
+
+//  t.OnTerminate
+  t.Start;
+
+end;
+
+procedure TfrmPesqProdutosListView.RoundRect1Click(Sender: TObject);
+var
+t : TThread;
+begin
+  RoundRect1.Visible := False;
+  TLoading.Show(frmPesqProdutosListView, 'Consultando...');
+  t := TThread.CreateAnonymousThread(procedure
+  begin
+
+//    Data_Module.RESTRequest1.Execute;
+    FDMemTable1 := TProdutos.new.GetItems();
+    ListView1.BeginUpdate;
+    if edit1.Text = '' then
+    begin
+      while not FDMemTable1.eof do
+      begin
+        TThread.Synchronize(nil, procedure
+        begin
+
+
+            AddMakeUp(FDMemTable1.FieldByName('id').AsInteger,
+                      FDMemTable1.FieldByName('name').AsString,
+                      FDMemTable1.FieldByName('api_featured_image').AsString,
+                      FDMemTable1.FieldByName('price').AsString);
+
+            TLoading.Hide;
+        end);
+
+        FDMemTable1.Next;
+      end;
+
+    end
+    else
+    begin
+      ListView1.Items.Clear;
+      with FDMemTable1 do
+      begin
+      Filtered := False;
+      Filter := 'name = ' + QuotedStr(edit1.Text);
+      Filtered := True;
+      end;
+    end;
+
+    ListView1.EndUpdate;
+  end);
+
+
+
+
+//  t.OnTerminate
+  t.Start;
+
+
+
+
+end;
+
+end.

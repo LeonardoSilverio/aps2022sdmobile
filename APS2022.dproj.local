@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/08/30 16:28:52.000.815,=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/30 16:38:06.000.993,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_frmPesqProdutos.pas=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/30 16:38:06.000.993,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_frmPesqProdutos.fmx=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/08/30 16:39:59.000.403,=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/30 16:40:45.000.824,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_Data_Module.pas=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/08/30 16:40:45.000.824,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_Data_Module.dfm=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/08/30 16:56:22.000.780,C:\Users\sahid\Documents\UpSoftware\Demo AFV\AFV.dproj=C:\Users\sahid\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/08/31 00:55:35.000.399,=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/08/31 01:09:36.000.282,C:\Users\sahid\Documents\UpSoftware\Demo AFV\Frames\Frame_produtos.fmx=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.fmx</Transaction>
+    <Transaction>2022/08/31 01:09:36.000.282,C:\Users\sahid\Documents\UpSoftware\Demo AFV\Frames\Frame_produtos.pas=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/02 11:09:31.000.376,=C:\Users\sahid\Documents\UpSoftware\Demo AFV\FMX.BitmapHelper.pas</Transaction>
+    <Transaction>2022/09/02 11:21:08.000.065,=C:\Users\sahid\Documents\UpSoftware\Demo AFV\AnonThread.pas</Transaction>
+    <Transaction>2022/09/06 14:55:55.000.708,=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Loading.pas</Transaction>
+    <Transaction>2022/09/08 09:57:42.000.899,=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/08 09:59:10.000.082,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_frminicio.pas=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/08 09:59:10.000.082,C:\Users\sahid\Documents\UpSoftware\Demo AFV\U_frminicio.fmx=C:\Users\sahid\Documents\UpSoftware\Demo AFV\Unit1.fmx</Transaction>
+    <Transaction>2022/09/08 11:37:10.000.827,=C:\Users\mateu\OneDrive\Documents\Demo AFV\U_frmPesqProdutosListView10_4.pas</Transaction>
+    <Transaction>2022/09/08 11:46:03.000.539,C:\Users\mateu\OneDrive\Documents\Demo AFV\U_frmPesqProdutosListView10_4.pas=</Transaction>
+    <Transaction>2022/09/08 11:46:31.000.974,C:\Users\mateu\OneDrive\Documents\Demo AFV\U_frmPesqProdutosListView10_4.pas=</Transaction>
+    <Transaction>2022/09/08 11:46:36.000.922,=C:\Users\mateu\OneDrive\Documents\Demo AFV\U_frmPesqProdutosListView10_4.pas</Transaction>
+    <Transaction>2022/09/09 17:21:46.000.081,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/09 17:22:13.000.411,C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas=C:\Users\mateu\OneDrive\Documents\Demo AFV\LoadingProdutos.pas</Transaction>
+    <Transaction>2022/09/12 14:47:50.000.020,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/12 14:48:20.000.107,C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas=C:\Users\mateu\OneDrive\Documents\Demo AFV\Up_APITools.pas</Transaction>
+    <Transaction>2022/09/12 16:18:17.000.413,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/13 14:30:14.000.585,=C:\Users\mateu\OneDrive\Documents\Demo AFV\DataSetConverter4D.Util.pas</Transaction>
+    <Transaction>2022/09/13 14:30:14.000.455,=C:\Users\mateu\OneDrive\Documents\Demo AFV\DataSetConverter4D.Helper.pas</Transaction>
+    <Transaction>2022/09/13 14:30:14.000.524,=C:\Users\mateu\OneDrive\Documents\Demo AFV\DataSetConverter4D.pas</Transaction>
+    <Transaction>2022/09/13 14:30:14.000.494,=C:\Users\mateu\OneDrive\Documents\Demo AFV\DataSetConverter4D.Impl.pas</Transaction>
+    <Transaction>2022/09/13 14:55:54.000.489,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/09/15 09:21:04.000.016,C:\Users\mateu\OneDrive\Documents\Demo AFV\LoadingProdutos.pas=</Transaction>
+    <Transaction>2022/09/15 09:30:47.000.265,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\Up_APITools.pas</Transaction>
+    <Transaction>2022/09/15 09:31:11.000.669,C:\Users\mateu\OneDrive\Documents\Demo AFV\Frames\Frame_produtos.pas=</Transaction>
+    <Transaction>2022/09/15 09:32:23.000.696,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Forms\U_frminicio.pas</Transaction>
+    <Transaction>2022/09/15 09:32:27.000.864,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Forms\U_frmPesqProdutos.pas</Transaction>
+    <Transaction>2022/09/15 09:32:28.000.384,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Forms\U_frmPesqProdutosListView10_4.pas</Transaction>
+    <Transaction>2022/09/15 09:32:28.000.282,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Forms\U_frmPesqProdutosListView.pas</Transaction>
+    <Transaction>2022/09/15 09:32:36.000.507,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Frames\Frame_produtos.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.668,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\FMX.BitmapHelper.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.602,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\AnonThread.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.624,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\DataSetConverter4D.Helper.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.659,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\DataSetConverter4D.Util.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.649,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\DataSetConverter4D.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.638,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\DataSetConverter4D.Impl.pas</Transaction>
+    <Transaction>2022/09/15 09:32:43.000.677,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Units\Loading.pas</Transaction>
+    <Transaction>2022/09/15 15:06:34.000.981,=C:\Users\mateu\OneDrive\Documents\Demo AFV\Unit1.pas</Transaction>
+    <Transaction>2022/10/03 16:35:36.000.947,C:\Users\mateu\OneDrive\Área de Trabalho\Demo AFV\Forms\U_frmPesqProdutos.pas=</Transaction>
+    <Transaction>2022/10/03 16:35:36.000.836,C:\Users\mateu\OneDrive\Área de Trabalho\Demo AFV\Forms\U_frmPesqProdutosListView.pas=</Transaction>
+    <Transaction>2022/10/11 00:33:20.000.022,C:\Users\leosi\Desktop\APS\AFV.dproj=C:\Users\leosi\Desktop\APS\APS2022.dproj</Transaction>
+    <Transaction>2022/10/11 00:33:43.000.727,C:\Users\leosi\Desktop\APS\APS2022.dproj=C:\Users\leosi\Desktop\APS2022\APS2022.dproj</Transaction>
+    <Transaction>2022/11/02 10:46:22.974,C:\Users\leosi\Desktop\APS\Units\APITools.pas=C:\Users\leosi\Desktop\APS\Units\Up_APITools.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="" Android64=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

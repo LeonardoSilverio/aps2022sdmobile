@@ -1,0 +1,81 @@
+object FrameProduto: TFrameProduto
+  Size.Width = 283.000000000000000000
+  Size.Height = 125.000000000000000000
+  Size.PlatformDefault = False
+  object Rectangle1: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 273.000000000000000000
+    Size.Height = 115.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 5.000000000000000000
+    YRadius = 5.000000000000000000
+  end
+  object Label1: TLabel
+    AutoSize = True
+    StyledSettings = [Family]
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.WordWrap = False
+    Text = 'Label1'
+  end
+  object lblID: TLabel
+    AutoSize = True
+    StyledSettings = [Family]
+    Position.X = 128.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 46.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = claGray
+    TextSettings.WordWrap = False
+    Text = 'Label1'
+  end
+  object Label3: TLabel
+    AutoSize = True
+    StyledSettings = [Family]
+    Position.X = 90.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 19.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = claGray
+    TextSettings.WordWrap = False
+    Text = 'R$'
+  end
+  object Rectangle2: TRectangle
+    Fill.Bitmap.WrapMode = TileStretch
+    Fill.Kind = Bitmap
+    Position.X = 16.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+  end
+  object Label4: TLabel
+    AutoSize = True
+    StyledSettings = [Family]
+    Position.X = 88.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = claGray
+    TextSettings.WordWrap = False
+    Text = 'C'#243'd.'
+  end
+end

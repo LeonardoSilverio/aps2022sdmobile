@@ -1,0 +1,77 @@
+unit U_frminicio;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  AnonThread, FMX.BitmapHelper, Frame_produtos, Loading, U_Data_Module,
+  U_frmPesqProdutos, FMX.Controls.Presentation, FMX.StdCtrls,
+  U_frmPesqProdutosListView, U_frmPesqProdutosListView10_4, FMX.Objects,
+  DataSetConverter4D.Helper, DataSetConverter4D.Impl, DataSetConverter4D,
+  DataSetConverter4D.Util, Up_APITools;
+
+type
+  Tfrminicio = class(TForm)
+    layout1: TLayout;
+    RoundRect1: TRoundRect;
+    Label1: TLabel;
+    RoundRect2: TRoundRect;
+    Label2: TLabel;
+    RoundRect3: TRoundRect;
+    Label3: TLabel;
+    procedure Button2Click(Sender: TObject);
+    procedure RoundRect1Click(Sender: TObject);
+    procedure RoundRect3Click(Sender: TObject);
+    procedure RoundRect2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frminicio: Tfrminicio;
+
+implementation
+
+{$R *.fmx}
+
+procedure Tfrminicio.Button2Click(Sender: TObject);
+begin
+  if not assigned(frmPesqProdutosListView) then
+  begin
+    Application.CreateForm(TfrmPesqProdutosListView, frmPesqProdutosListView);
+    frmPesqProdutosListView.Show;
+  end;
+end;
+
+procedure Tfrminicio.RoundRect1Click(Sender: TObject);
+begin
+  if not assigned(frmPesqProdutos) then
+  begin
+    Application.CreateForm(TfrmPesqProdutos, frmPesqProdutos);
+    frmPesqProdutos.Show;
+  end;
+
+end;
+
+procedure Tfrminicio.RoundRect2Click(Sender: TObject);
+begin
+  if not assigned(frmPesqProdutosListView10_4) then
+  begin
+    Application.CreateForm(TfrmPesqProdutosListView10_4, frmPesqProdutosListView10_4);
+    frmPesqProdutosListView10_4.Show;
+  end;
+end;
+
+procedure Tfrminicio.RoundRect3Click(Sender: TObject);
+begin
+  if not assigned(frmPesqProdutosListView) then
+  begin
+    Application.CreateForm(TfrmPesqProdutosListView, frmPesqProdutosListView);
+    frmPesqProdutosListView.Show;
+  end;
+end;
+
+end.
